@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Cloud, Desktop, Code, Server, Phone } from 'lucide-react';
+import { ArrowRight, Shield, Cloud, Monitor, Code, Server, Phone } from 'lucide-react';
 
 const serviceItems = [
   {
@@ -16,7 +16,7 @@ const serviceItems = [
     description: 'Scale your infrastructure with reliable and secure cloud solutions tailored to your needs.',
   },
   {
-    icon: <Desktop className="h-10 w-10 text-tech-500" />,
+    icon: <Monitor className="h-10 w-10 text-tech-500" />,
     title: 'IT Support',
     description: '24/7 technical support and managed services to keep your business running smoothly.',
   },
