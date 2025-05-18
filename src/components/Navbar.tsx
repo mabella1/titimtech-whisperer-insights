@@ -22,7 +22,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="font-bold text-2xl gradient-text">TitimTech</span>
+              <img 
+                src="/lovable-uploads/11ffb61c-3296-45cc-b0a4-097b75630e5d.png" 
+                alt="TitimTech Logo" 
+                className="h-8 md:h-10"
+              />
             </Link>
           </div>
 

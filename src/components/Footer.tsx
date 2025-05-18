@@ -11,7 +11,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold text-white">TitimTech</span>
+              <img 
+                src="/lovable-uploads/11ffb61c-3296-45cc-b0a4-097b75630e5d.png" 
+                alt="TitimTech Logo" 
+                className="h-8 mb-2 brightness-150 contrast-125"
+              />
             </Link>
             <p className="mb-4">
               Empowering businesses with innovative IT solutions and support services
