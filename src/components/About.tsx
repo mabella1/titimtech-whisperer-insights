@@ -13,10 +13,9 @@ const About = () => {
               <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-purple-400 to-tech-400 opacity-30 blur-xl"></div>
               <div className="relative rounded-lg overflow-hidden border border-tech-100 bg-white shadow-xl">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/lovable-uploads/9d1f7fae-9cf5-4775-a718-bd046b8c6b40.png" 
                   alt="About Titim Tech" 
                   className="w-full h-auto"
-                  style={{ minHeight: '300px' }}
                 />
               </div>
             </div>
