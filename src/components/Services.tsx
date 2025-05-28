@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Cloud, Monitor, Code, Server, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const serviceItems = [
   {
@@ -78,9 +78,11 @@ const Services = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button variant="link" className="text-tech-600 p-0 hover:text-tech-800">
-                  Learn more <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                <Link to="/services">
+                  <Button variant="link" className="text-tech-600 p-0 hover:text-tech-800">
+                    Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -42,9 +43,11 @@ const Hero = () => {
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-tech-200 hover:bg-tech-50">
-                Learn More
-              </Button>
+              <Link to="/services">
+                <Button size="lg" variant="outline" className="border-tech-200 hover:bg-tech-50">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
           

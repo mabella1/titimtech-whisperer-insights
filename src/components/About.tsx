@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -68,9 +69,11 @@ const About = () => {
             </div>
             
             <div className="pt-4">
-              <Button className="bg-tech-600 hover:bg-tech-700">
-                Learn Our Story
-              </Button>
+              <Link to="/about">
+                <Button className="bg-tech-600 hover:bg-tech-700">
+                  Learn Our Story
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
