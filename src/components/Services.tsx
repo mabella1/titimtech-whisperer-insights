@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -33,11 +34,13 @@ const serviceItems = [
     icon: <Server className="h-10 w-10 text-tech-500" />,
     title: 'Network Infrastructure',
     description: 'Design, implementation, and management of reliable network systems.',
+    image: '/lovable-uploads/73080f5d-a08f-43f6-a9c4-7202f3ece974.png'
   },
   {
     icon: <Phone className="h-10 w-10 text-tech-500" />,
     title: 'Telecommunications',
     description: 'Modern communication solutions including VoIP and unified communications.',
+    image: '/lovable-uploads/78d1f9df-0134-43d7-a6bb-9e6faccbbe65.png'
   },
 ];
 
