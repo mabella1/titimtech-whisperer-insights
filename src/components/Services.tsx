@@ -10,37 +10,43 @@ const serviceItems = [
     icon: <Shield className="h-10 w-10 text-tech-500" />,
     title: 'Cybersecurity',
     description: 'Protect your business with advanced threat detection, prevention, and response solutions.',
-    image: '/lovable-uploads/947119f6-a7d4-4402-86db-4d02f44bfb82.png'
+    image: '/lovable-uploads/947119f6-a7d4-4402-86db-4d02f44bfb82.png',
+    link: '/services/cybersecurity'
   },
   {
     icon: <Cloud className="h-10 w-10 text-tech-500" />,
     title: 'Cloud Services',
     description: 'Scale your infrastructure with reliable and secure cloud solutions tailored to your needs.',
-    image: '/lovable-uploads/dd37a744-5329-47ac-b339-042bf20d807e.png'
+    image: '/lovable-uploads/dd37a744-5329-47ac-b339-042bf20d807e.png',
+    link: '/services/cloud-services'
   },
   {
     icon: <Monitor className="h-10 w-10 text-tech-500" />,
     title: 'IT Support',
     description: '24/7 technical support and managed services to keep your business running smoothly.',
-    image: '/lovable-uploads/ea59812f-459b-4a20-ad63-b0a6854bb001.png'
+    image: '/lovable-uploads/ea59812f-459b-4a20-ad63-b0a6854bb001.png',
+    link: '/services/it-support'
   },
   {
     icon: <Code className="h-10 w-10 text-tech-500" />,
     title: 'Software Solutions',
     description: 'Custom software development and integration services to streamline your operations.',
-    image: '/lovable-uploads/dc592362-8eff-458b-b911-0ef4c923d663.png'
+    image: '/lovable-uploads/dc592362-8eff-458b-b911-0ef4c923d663.png',
+    link: '/services/software-solutions'
   },
   {
     icon: <Server className="h-10 w-10 text-tech-500" />,
     title: 'Network Infrastructure',
     description: 'Design, implementation, and management of reliable network systems.',
-    image: '/lovable-uploads/73080f5d-a08f-43f6-a9c4-7202f3ece974.png'
+    image: '/lovable-uploads/73080f5d-a08f-43f6-a9c4-7202f3ece974.png',
+    link: '/services/network-infrastructure'
   },
   {
     icon: <Phone className="h-10 w-10 text-tech-500" />,
     title: 'Telecommunications',
     description: 'Modern communication solutions including VoIP and unified communications.',
-    image: '/lovable-uploads/78d1f9df-0134-43d7-a6bb-9e6faccbbe65.png'
+    image: '/lovable-uploads/78d1f9df-0134-43d7-a6bb-9e6faccbbe65.png',
+    link: '/services/telecommunications'
   },
 ];
 
@@ -81,7 +87,7 @@ const Services = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Link to="/services">
+                <Link to={service.link}>
                   <Button variant="link" className="text-tech-600 p-0 hover:text-tech-800">
                     Learn more <ArrowRight className="ml-1 h-4 w-4" />
                   </Button>
