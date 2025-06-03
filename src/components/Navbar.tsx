@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import LanguageSelector from '@/components/LanguageSelector';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const handleNavClick = (id: string) => {
     setIsOpen(false);
@@ -36,31 +39,33 @@ const Navbar = () => {
               onClick={() => handleNavClick('home')} 
               className="text-gray-700 hover:text-tech-600 font-medium transition-colors"
             >
-              Home
+              {t('home')}
             </button>
             <button 
               onClick={() => handleNavClick('services')} 
               className="text-gray-700 hover:text-tech-600 font-medium transition-colors"
             >
-              Services
+              {t('services')}
             </button>
             <button 
               onClick={() => handleNavClick('about')} 
               className="text-gray-700 hover:text-tech-600 font-medium transition-colors"
             >
-              About
+              {t('about')}
             </button>
             <button 
               onClick={() => handleNavClick('contact')} 
               className="text-gray-700 hover:text-tech-600 font-medium transition-colors"
             >
-              Contact
+              {t('contact')}
             </button>
-            <Button className="bg-tech-600 hover:bg-tech-700">Get Started</Button>
+            <LanguageSelector />
+            <Button className="bg-tech-600 hover:bg-tech-700">{t('getStarted')}</Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSelector />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-500 hover:text-tech-600 focus:outline-none"
@@ -78,28 +83,28 @@ const Navbar = () => {
                 onClick={() => handleNavClick('home')} 
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
               >
-                Home
+                {t('home')}
               </button>
               <button 
                 onClick={() => handleNavClick('services')} 
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
               >
-                Services
+                {t('services')}
               </button>
               <button 
                 onClick={() => handleNavClick('about')} 
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
               >
-                About
+                {t('about')}
               </button>
               <button 
                 onClick={() => handleNavClick('contact')} 
                 className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
               >
-                Contact
+                {t('contact')}
               </button>
               <div className="px-3 py-2">
-                <Button className="w-full bg-tech-600 hover:bg-tech-700">Get Started</Button>
+                <Button className="w-full bg-tech-600 hover:bg-tech-700">{t('getStarted')}</Button>
               </div>
             </div>
           </div>
