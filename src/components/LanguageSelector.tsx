@@ -16,7 +16,7 @@ const LanguageSelector = () => {
   const languages = [
     { value: 'en' as Language, label: 'English', flag: '🇺🇸' },
     { value: 'fr' as Language, label: 'Français', flag: '🇫🇷' },
-    { value: 'ar' as Language, label: 'العربية', flag: '🇸🇦' }
+    { value: 'ar' as Language, label: 'عربي', flag: '🇸🇦' }
   ];
 
   return (
