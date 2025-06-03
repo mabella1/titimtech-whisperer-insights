@@ -14,9 +14,9 @@ const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
 
   const languages = [
-    { value: 'en' as Language, label: 'English', flag: '🇺🇸' },
-    { value: 'fr' as Language, label: 'Français', flag: '🇫🇷' },
-    { value: 'ar' as Language, label: 'عربي', flag: '🇸🇦' }
+    { value: 'en' as Language, label: 'English' },
+    { value: 'fr' as Language, label: 'Français' },
+    { value: 'ar' as Language, label: 'عربي' }
   ];
 
   return (
@@ -30,10 +30,7 @@ const LanguageSelector = () => {
       <SelectContent>
         {languages.map((lang) => (
           <SelectItem key={lang.value} value={lang.value}>
-            <div className="flex items-center gap-2">
-              <span>{lang.flag}</span>
-              <span>{lang.label}</span>
-            </div>
+            <span>{lang.label}</span>
           </SelectItem>
         ))}
       </SelectContent>
