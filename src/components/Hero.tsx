@@ -3,9 +3,17 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useLanguage();
+
+  const handleLearnMore = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-tech-50 to-white overflow-hidden">
@@ -25,10 +33,17 @@ const Hero = () => {
               {t('heroSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-tech-600 hover:bg-tech-700 text-white">
-                {t('getStarted')} <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-tech-300 text-tech-700 hover:bg-tech-50">
+              <Link to="/contact">
+                <Button size="lg" className="bg-tech-600 hover:bg-tech-700 text-white">
+                  {t('getStarted')} <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-tech-300 text-tech-700 hover:bg-tech-50"
+                onClick={handleLearnMore}
+              >
                 <Play className="mr-2 h-5 w-5" /> {t('learnMore')}
               </Button>
             </div>
