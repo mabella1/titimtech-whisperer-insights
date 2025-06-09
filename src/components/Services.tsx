@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,8 +14,7 @@ const Services = () => {
       title: t('cloudServices'),
       description: t('cloudServicesDesc'),
       link: '/services/cloud-services',
-      image: '/lovable-uploads/11ffb61c-3296-45cc-b0a4-097b75630e5d.png',
-      hideIcon: true
+      image: '/lovable-uploads/8fc30f1c-045b-4b84-8660-0e522e41d4d6.png'
     },
     {
       icon: Shield,
@@ -79,11 +77,9 @@ const Services = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <CardHeader className="text-center pb-4">
-                {!service.hideIcon && (
-                  <div className="w-16 h-16 bg-tech-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 transition-colors duration-300">
-                    <service.icon className="h-8 w-8 text-tech-600 group-hover:text-white transition-colors duration-300" />
-                  </div>
-                )}
+                <div className="w-16 h-16 bg-tech-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 transition-colors duration-300">
+                  <service.icon className="h-8 w-8 text-tech-600 group-hover:text-white transition-colors duration-300" />
+                </div>
                 <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                 <CardDescription className="text-gray-600">
                   {service.description}
