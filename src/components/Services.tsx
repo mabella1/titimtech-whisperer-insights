@@ -14,37 +14,43 @@ const Services = () => {
       icon: Cloud,
       title: t('cloudServices'),
       description: t('cloudServicesDesc'),
-      link: '/services/cloud-services'
+      link: '/services/cloud-services',
+      image: '/lovable-uploads/11ffb61c-3296-45cc-b0a4-097b75630e5d.png'
     },
     {
       icon: Shield,
       title: t('cybersecurity'),
       description: t('cybersecurityDesc'),
-      link: '/services/cybersecurity'
+      link: '/services/cybersecurity',
+      image: '/lovable-uploads/947119f6-a7d4-4402-86db-4d02f44bfb82.png'
     },
     {
       icon: Monitor,
       title: t('itSupport'),
       description: t('itSupportDesc'),
-      link: '/services/it-support'
+      link: '/services/it-support',
+      image: '/lovable-uploads/ea59812f-459b-4a20-ad63-b0a6854bb001.png'
     },
     {
       icon: Code,
       title: t('softwareSolutions'),
       description: t('softwareSolutionsDesc'),
-      link: '/services/software-solutions'
+      link: '/services/software-solutions',
+      image: '/lovable-uploads/dc592362-8eff-458b-b911-0ef4c923d663.png'
     },
     {
       icon: Network,
       title: t('networkInfrastructure'),
       description: t('networkInfrastructureDesc'),
-      link: '/services/network-infrastructure'
+      link: '/services/network-infrastructure',
+      image: '/lovable-uploads/73080f5d-a08f-43f6-a9c4-7202f3ece974.png'
     },
     {
       icon: Phone,
       title: t('telecommunications'),
       description: t('telecommunicationsDesc'),
-      link: '/services/telecommunications'
+      link: '/services/telecommunications',
+      image: '/lovable-uploads/78d1f9df-0134-43d7-a6bb-9e6faccbbe65.png'
     }
   ];
 
@@ -62,7 +68,15 @@ const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-tech-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 transition-colors duration-300">
                   <service.icon className="h-8 w-8 text-tech-600 group-hover:text-white transition-colors duration-300" />
