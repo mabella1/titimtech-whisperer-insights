@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const handleNavClick = (id: string) => {
     setIsOpen(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className={`hidden md:flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             <button 
               onClick={() => handleNavClick('home')} 
               className="text-gray-700 hover:text-tech-600 font-medium transition-colors"
@@ -78,28 +78,28 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden bg-white">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className={`px-2 pt-2 pb-3 ${language === 'ar' ? 'space-y-2' : 'space-y-1'} sm:px-3`}>
               <button 
                 onClick={() => handleNavClick('home')} 
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
+                className={`block w-full text-left px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50 ${language === 'ar' ? 'text-right' : ''}`}
               >
                 {t('home')}
               </button>
               <button 
                 onClick={() => handleNavClick('services')} 
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
+                className={`block w-full text-left px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50 ${language === 'ar' ? 'text-right' : ''}`}
               >
                 {t('services')}
               </button>
               <button 
                 onClick={() => handleNavClick('about')} 
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
+                className={`block w-full text-left px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50 ${language === 'ar' ? 'text-right' : ''}`}
               >
                 {t('about')}
               </button>
               <button 
                 onClick={() => handleNavClick('contact')} 
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50"
+                className={`block w-full text-left px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-tech-600 hover:bg-gray-50 ${language === 'ar' ? 'text-right' : ''}`}
               >
                 {t('contact')}
               </button>
