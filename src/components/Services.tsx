@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Cloud, Shield, Monitor, Code, Network, Phone } from 'lucide-react';
+import { Cloud, Shield, Monitor, Code, TestTube, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -38,17 +38,17 @@ const Services = () => {
       image: '/lovable-uploads/dc592362-8eff-458b-b911-0ef4c923d663.png'
     },
     {
-      icon: Network,
-      title: t('networkInfrastructure'),
-      description: t('networkInfrastructureDesc'),
-      link: '/services/network-infrastructure',
+      icon: TestTube,
+      title: 'QA & Software Testing',
+      description: 'Comprehensive testing services to ensure your software quality and reliability.',
+      link: '/services/qa-testing',
       image: '/lovable-uploads/73080f5d-a08f-43f6-a9c4-7202f3ece974.png'
     },
     {
-      icon: Phone,
-      title: t('telecommunications'),
-      description: t('telecommunicationsDesc'),
-      link: '/services/telecommunications',
+      icon: BarChart3,
+      title: 'Data Analytics & Business Intelligence',
+      description: 'Transform your data into actionable insights with advanced analytics solutions.',
+      link: '/services/data-analytics',
       image: '/lovable-uploads/78d1f9df-0134-43d7-a6bb-9e6faccbbe65.png'
     }
   ];
