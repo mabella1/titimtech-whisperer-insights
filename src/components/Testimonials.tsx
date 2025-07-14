@@ -6,20 +6,20 @@ import { Star } from 'lucide-react';
 const testimonials = [
   {
     content: "Titim Tech completely transformed our IT infrastructure. Their expertise and responsiveness have been invaluable to our business growth.",
-    author: "Sarah Johnson",
-    position: "CEO, Marktec Solutions",
+    author: "Garry",
+    position: "CXM Solutions",
     rating: 5
   },
   {
     content: "We've been working with Titim Tech for our cybersecurity needs. Their team identified vulnerabilities we weren't aware of and implemented robust solutions.",
-    author: "Michael Reeves",
-    position: "CTO, FinCore Systems",
+    author: "Doug",
+    position: "Qmatic",
     rating: 5
   },
   {
     content: "The cloud migration support from Titim Tech was seamless. They minimized downtime and provided excellent training for our team.",
-    author: "David Chen",
-    position: "IT Director, Global Retail Inc.",
+    author: "Zach",
+    position: "Smart CJM GmbH",
     rating: 5
   }
 ];
